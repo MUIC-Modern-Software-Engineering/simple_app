@@ -1,4 +1,4 @@
-FROM python:3.10-slim
+FROM python:3.10-slim-bullseye
 
 WORKDIR /app
 
@@ -14,8 +14,12 @@ COPY poetry.lock poetry.lock
 
 RUN poetry install --no-root
 
+RUN apt-get remove -y gcc build-essential
+RUN apt-get autoremove -y
+
 COPY . .
 
 RUN poetry install
 
+EXPOSE 5555
 CMD [ "poetry", "run" , "runserver"]

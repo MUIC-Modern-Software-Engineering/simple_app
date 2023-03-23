@@ -5,12 +5,11 @@ from simple_app.models.todo import Todo
 
 
 def add_todo():
-    action = request.json.get('action', None)
+    action = request.json.get("action", None)
     if action is None:
-        return 'action not found', 400
+        return "action not found", 400
     todo = Todo(action=action)
     return todo
-
 
 
 def list_todo():

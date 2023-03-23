@@ -1,0 +1,1 @@
+docker run --env=DB_URI=postgresql://postgres@host.docker.internal:5432/demo --platform=linux/amd64 -p 7777:5555 temp
