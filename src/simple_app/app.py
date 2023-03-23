@@ -6,7 +6,6 @@ from flask_migrate import Migrate
 
 from simple_app.api import todo_api
 from simple_app.db import db
-from simple_app.models.todo import Todo
 
 load_dotenv()
 
