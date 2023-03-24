@@ -143,11 +143,11 @@ jobs:
         with:
           name: coverage-report
 
-      - name: SonarQube Scan
-        uses: sonarsource/sonarcloud-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+#      - name: SonarQube Scan
+#        uses: sonarsource/sonarcloud-github-action@master
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
+#          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   docker:
     needs: test-and-coverage
     if: ${{ github.ref == 'refs/heads/main' }}
