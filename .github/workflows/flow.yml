@@ -5,7 +5,7 @@ on: [ push ]
 env:
   PYTHON_VERSION: "3.10"
   POETRY_VERSION: "1.4.0"
-  CONTAINER_REGISTRY: muicswe.azurecr.io
+  CONTAINER_REGISTRY: swecontainer22.azurecr.io
   IMAGE_NAME: simple_app
 
 # Need:
