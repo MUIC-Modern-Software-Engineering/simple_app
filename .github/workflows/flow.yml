@@ -8,6 +8,10 @@ env:
   CONTAINER_REGISTRY: muicswe.azurecr.io
   IMAGE_NAME: simple_app
 
+# Need:
+#secrets.REGISTRY_USERNAME
+#secrets.REGISTRY_PASSWORD
+
 jobs:
   lint:
     runs-on: ubuntu-20.04
