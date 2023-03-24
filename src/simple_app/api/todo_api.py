@@ -1,7 +1,5 @@
 from secrets import token_hex
 
-from flask import request
-
 from simple_app.db import db
 from simple_app.models.todo import Todo
 
@@ -10,7 +8,7 @@ def add_random_todo():
     todo = Todo(action=token_hex(8))
     db.session.add(todo)
     db.session.commit()
-    return {'id': todo.id, 'action': todo.action}
+    return {"id": todo.id, "action": todo.action}
 
 
 def list_todo():
